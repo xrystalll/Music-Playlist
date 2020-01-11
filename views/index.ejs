@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Audio Playlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#1c252a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Playlist">
+
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <ul class="head_inner">
+            <li class="head_item">
+                <i class="material-icons">music_note</i>
+            </li>
+            <li class="head_title">
+                <h1>Audio</h1>
+            </li>
+            <li class="head_item search_btn">
+                <i class="material-icons">search</i>
+            </li>
+            <li class="head_item modal_btn add_modal">
+                <i class="material-icons">add</i>
+            </li>
+        </ul>
+    </header>
+
+    <div class="search">
+        <ul class="search_inner">
+            <li class="search_close search_btn">
+                <i class="material-icons">arrow_back</i>
+            </li>
+            <input id="search-input" class="search_input" type="text" placeholder="Search artist or song">
+        </ul>
+    </div>
+
+    <div class="wrapper">
+        <div class="artwork">
+            <img src="cover.png" alt="">
+            <div class="tracks"><span id="track_count"></span> Tracks</div>
+            <div class="playall playbtn">
+                <span>PLAY</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1 class="album">All music</h1>
+
+            <div class="playlist">
+                <div class="empty-results">
+                    <div class="empty_words">
+                        <div class="empty_top">Nothing found!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="player">
+        <div class="bar">
+            <div class="progress"></div>
+        </div>
+
+        <div class="control-side all-actions">
+            <div class="audio">
+                <div class="audio-side">
+                    <div class="audio-btn cover_meta"></div>
+                </div>
+                <div class="audio-text">
+                    <span class="artist artist_meta">
+                        <span class="place-text" style="width: 62px;"></span>
+                    </span>
+                    <span class="title song_meta">
+                        <span class="place-text" style="width: 92px;"></span>
+                    </span>
+                </div>
+            </div>
+            <div class="info">
+                <div class="control-side">
+                    <span class="prev">
+                        <i class="material-icons">skip_previous</i>
+                    </span>
+
+                    <span class="playbtn"></span>
+
+                    <span class="next">
+                        <i class="material-icons">skip_next</i>
+                    </span>
+                </div>
+
+                <div class="control-side secondary">
+                    <span class="repeat"></span>
+                    <span class="vol">
+                        <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+                        <div class="fill"></div>
+                        <span class="mute"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal_inner">
+            <div class="close"><i class="material-icons">close</i></div>
+            <div id="modal_container"></div>
+        </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <script src="audio.js"></script>
+</body>
+</html>
