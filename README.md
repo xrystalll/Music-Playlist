@@ -1,7 +1,7 @@
 # Music-Playlist
 ![Music-Playlist](/screenshot.png)
 
-Creation and installation of the Firebase
+**Creation and installation of the Firebase**
 - Go to https://console.firebase.google.com and create project
 - Set read and write permissions:
 
@@ -15,18 +15,18 @@ Creation and installation of the Firebase
 ```
 
 
-- In file /public/audio.js on the fourth line insert your ID of the created database, eg:
+- In file `/public/audio.js` on the fourth line insert your ID of the created database, eg:
 
 ```javascript
 const dbname = 'your_db_id';
 ```
 
 
-Use
+**Use**
 - New tracks are added through the form when you click on the plus icon "+"
 
 
-You can add more tracks in other ways, for example just registering html markup directly in the file /index.html.
+You can add more tracks in other ways, for example just registering html markup directly in the file `/views/index.ejs`.
 
 eg:
 
