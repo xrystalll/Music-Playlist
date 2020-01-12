@@ -191,30 +191,29 @@ header {
     background: #7adad1;
     height: 3px;
 }
+.info {
+    margin-left: auto;
+    padding: 8px 16px;
+    color: #546e7a;
+    display: flex;
+    align-items: center;
+}
+.info a {
+    color: #546e7a;
+}
+.info span {
+    line-height: 0;
+    cursor: pointer;
+    align-self: center;
+}
 .player .audio {
     padding: 4px;
 }
 .player .audio:hover {
     background: none;
-    cursor: default;
 }
 .player .audio-text span {
     max-width: 80px;
-}
-.control-side {
-    display: flex;
-}
-.control-side.secondary {
-    margin-left: 12px;
-}
-.all-actions {
-    justify-content: initial;
-    margin: 0 auto;
-    max-width: 800px;
-    height: 50px;
-}
-span.repeat {
-    margin-right: 10px;
 }
 .player .audio-side {
     padding-right: 12px;
@@ -227,9 +226,10 @@ span.repeat {
 }
 .place-text {
     display: block;
-    height: 10px;
+    height: 12px;
     background: #263238;
     margin: 4px 0;
+    border-radius: 50px;
 }
 @media (max-width: 310px) {
     .player .audio-side {
@@ -277,23 +277,17 @@ span.repeat {
         max-width: 460px;
     }
 }
-.info {
-    margin-left: auto;
-    padding: 8px 16px;
-    color: #546e7a;
+.control-side {
     display: flex;
-    align-items: center;
 }
-.info a {
-    color: #546e7a;
+.control-side.secondary {
+    margin-left: 12px;
 }
-.info span {
-    line-height: 0;
-    cursor: pointer;
-    align-self: center;
-}
-.info .time, .info .duration {
-    font-size: 14px;
+.all-actions {
+    justify-content: initial;
+    margin: 0 auto;
+    max-width: 720px;
+    height: 50px;
 }
 .playbtn:before {
     font-family: 'Material Icons';
@@ -306,6 +300,9 @@ span.repeat {
 .playbtn.playing:before {
     content: 'pause';
 }
+.repeat {
+    margin-right: 10px;
+}
 .repeat:before {
     font-family: 'Material Icons';
     content: 'repeat';
@@ -315,6 +312,17 @@ span.repeat {
 }
 .repeat.loop:before {
     content: 'repeat_one';
+    color: #7adad1;
+}
+.reverse:before {
+    font-family: 'Material Icons';
+    content: 'swap_vert';
+    font-size: 22px;
+    display: none;
+    line-height: 1;
+}
+.reverse.active:before {
+    content: 'swap_vert';
     color: #7adad1;
 }
 .vol {
@@ -684,7 +692,7 @@ span.repeat {
     margin: 16px auto 0 auto;
     z-index: 1;
     color: #fff;
-    max-width: 800px;
+    max-width: 720px;
 }
 .artwork {
     display: flex;

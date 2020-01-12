@@ -26,7 +26,7 @@ const dbname = 'your_db_id';
 - New tracks are added through the form when you click on the plus icon "+"
 
 
-You can add more tracks in other ways, for example just registering html markup directly in the file `/views/index.ejs`.
+You can add more tracks in other ways, for example just paste html markup directly in the file `/views/index.ejs` in class `playlist`.
 
 eg:
 
